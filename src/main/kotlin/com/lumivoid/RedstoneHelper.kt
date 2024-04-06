@@ -1,6 +1,8 @@
 package com.lumivoid
 
 import com.lumivoid.commands.CalcCommand
+import com.swift.commands.PosCommand
+import com.swift.commands.CatCommand
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback
 import net.minecraft.entity.player.PlayerInventory
@@ -19,6 +21,8 @@ object RedstoneHelper : ModInitializer {
 
 		CommandRegistrationCallback.EVENT.register { dispatcher, registryAccess, environment ->
 			CalcCommand().register(dispatcher)
+			PosCommand().register(dispatcher)
+			CatCommand().register(dispatcher)
 		}
 	}
 }
