@@ -3,7 +3,7 @@ package com.lumivoid
 import net.fabricmc.api.ClientModInitializer
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents
 import net.minecraft.client.MinecraftClient
-import net.minecraft.text.Text
+import net.minecraft.text.Text // Import Text class
 import org.lwjgl.glfw.GLFW
 
 object RedstoneHelperClient : ClientModInitializer {
@@ -18,7 +18,7 @@ object RedstoneHelperClient : ClientModInitializer {
                     val coordsMessage = "Current coordinates: ${pos.x}, ${pos.y}, ${pos.z}"
                     player.sendMessage(Text.literal(coordsMessage), false)
                     messageSent = true
-                } else if (GLFW.glfwGetKey(client.window.handle, GLFW.GLFW_KEY_X) == GLFW.GLFW_RELEASE || GLFW.glfwGetKey(client.window.handle, GLFW.GLFW_KEY_LEFT_SHIFT) == GLFW.GLFW_RELEASE) {
+                } else if (GLFW.glfwGetKey(client.window.handle, GLFW.GLFW_KEY_LEFT_SHIFT) == GLFW.GLFW_RELEASE || GLFW.glfwGetKey(client.window.handle, GLFW.GLFW_KEY_X) == GLFW.GLFW_RELEASE) {
                     messageSent = false
                 }
             }
