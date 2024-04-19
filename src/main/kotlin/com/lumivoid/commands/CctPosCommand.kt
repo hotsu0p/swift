@@ -28,11 +28,10 @@ class CctPosCommand {
                             val message = {
                                 Text.literal("")
                                     .append(Text.literal(coordsText).styled { style ->
-                                        style.withColor(Formatting.GREEN)
+                                        style.withColor(Formatting.BLUE)
                                             .withClickEvent(net.minecraft.text.ClickEvent(net.minecraft.text.ClickEvent.Action.COPY_TO_CLIPBOARD, coordsText))
                                             .withHoverEvent(net.minecraft.text.HoverEvent(net.minecraft.text.HoverEvent.Action.SHOW_TEXT, Text.literal("Click to copy coordinates")))
                                     })
-                                    .append(Text.literal(""))
                             }
                             context.source.sendFeedback(message, false)
                         } else {
